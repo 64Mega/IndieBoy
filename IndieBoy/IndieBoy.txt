@@ -1,0 +1,1 @@
+./Debug/main.cpp.o ./Debug/config_file.cpp.o ./Debug/game_window.cpp.o ./Debug/game_object.cpp.o ./Debug/Log.cpp.o   

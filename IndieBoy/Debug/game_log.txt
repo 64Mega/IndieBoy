@@ -1,0 +1,3 @@
+[ConfigFile][INFO](20:53:13): Loaded config.cfg
+[GameWindow][INFO](20:53:13): Getting window configuration from file
+[GameWindow][INFO](20:53:13): Creating GameWindow

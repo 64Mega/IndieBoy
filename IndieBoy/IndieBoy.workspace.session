@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Session Name="H:\Dev\IndieBoy\IndieBoy\IndieBoy.workspace">
+  <int Value="0" Name="m_selectedTab"/>
+  <wxString Value="H:\Dev\IndieBoy\IndieBoy\IndieBoy.workspace" Name="m_workspaceName"/>
+  <TabInfoArray Name="TabInfoArray">
+    <TabInfo>
+      <wxString Value="H:\Dev\IndieBoy\IndieBoy\main.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="29" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+    </TabInfo>
+  </TabInfoArray>
+  <SerializedObject Name="m_breakpoints">
+    <long Value="0" Name="Count"/>
+  </SerializedObject>
+</Session>
