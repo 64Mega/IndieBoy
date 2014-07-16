@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="H:\Dev\IndieBoy\IndieBoy\IndieBoy.workspace">
-  <int Value="1" Name="m_selectedTab"/>
+  <int Value="0" Name="m_selectedTab"/>
   <wxString Value="H:\Dev\IndieBoy\IndieBoy\IndieBoy.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="H:\Dev\IndieBoy\IndieBoy\Log.h" Name="FileName"/>
-      <int Value="4" Name="FirstVisibleLine"/>
-      <int Value="22" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="H:\Dev\IndieBoy\IndieBoy\Log.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="12" Name="CurrentLine"/>
+      <wxString Value="H:\Dev\IndieBoy\IndieBoy\main.cpp" Name="FileName"/>
+      <int Value="16" Name="FirstVisibleLine"/>
+      <int Value="30" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>

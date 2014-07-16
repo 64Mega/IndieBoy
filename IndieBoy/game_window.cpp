@@ -22,21 +22,21 @@ GameWindow::~GameWindow()
 	}
 }
 
-void GameWindow::create()
+void GameWindow::create(ConfigFile& config)
 {
 	Log::info("GameWindow", "Creating GameWindow");
 	
 	if(this->window != nullptr)
 	{
 		// Re-create window
-		sf::Uint32 style = fullscreen ? sf::Style::Fullscreen : sf::Style::Default;
+		sf::Uint32 style = fullscreen ? sf::Style::Fullscreen : sf::Style::Close;
 		
 		window->create(sf::VideoMode(native_width*scale, native_height*scale), title, style);
 		window->setFramerateLimit(framerate);
 	}
 	else
 	{
-		sf::Uint32 style = fullscreen ? sf::Style::Fullscreen : sf::Style::Default;
+		sf::Uint32 style = fullscreen ? sf::Style::Fullscreen : sf::Style::Close;
 		window = new sf::RenderWindow(sf::VideoMode(native_width*scale, native_height*scale), title, style);
 		window->setFramerateLimit(framerate);
 	}
@@ -51,6 +51,14 @@ void GameWindow::create()
 	glEnable(GL_COLOR_MATERIAL);
 	glEnable(GL_DEPTH_TEST);
 	glDepthFunc(GL_LEQUAL);
+	
+	// Re-save all values to config
+	config.writeInt("NativeWidth", native_width);
+	config.writeInt("NativeHeight", native_height);
+	config.writeInt("FixedFramerate", (int) framerate);
+	config.writeInt("Scale", (int)(scale*100));
+	config.writeBool("Fullscreen", fullscreen);
+	config.writeString("WindowTitle", title);
 }
 
 bool GameWindow::refresh()
@@ -98,4 +106,11 @@ void GameWindow::setupFromConfig(ConfigFile& config)
 	config.writeInt("Scale", (int)(scale*100));
 	config.writeBool("Fullscreen", fullscreen);
 	config.writeString("WindowTitle", title);
+}
+void GameWindow::close()
+{
+	if(this->window)
+	{
+		this->window->close();
+	}
 }

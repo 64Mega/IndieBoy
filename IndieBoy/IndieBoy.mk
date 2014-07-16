@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Daniel
-Date                   :=07/15/14
+Date                   :=07/16/14
 CodeLitePath           :="C:\Program Files\CodeLite"
 LinkerName             :=C:\MinGW-4.7\bin\g++.exe 
 SharedObjectLinkerName :=C:\MinGW-4.7\bin\g++.exe -shared -fPIC
@@ -63,7 +63,7 @@ AS       := C:\MinGW-4.7\bin\as.exe
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
 UNIT_TEST_PP_SRC_DIR:=C:\UnitTest++-1.3
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/config_file.cpp$(ObjectSuffix) $(IntermediateDirectory)/game_window.cpp$(ObjectSuffix) $(IntermediateDirectory)/game_object.cpp$(ObjectSuffix) $(IntermediateDirectory)/Log.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/config_file.cpp$(ObjectSuffix) $(IntermediateDirectory)/game_object.cpp$(ObjectSuffix) $(IntermediateDirectory)/game_window.cpp$(ObjectSuffix) $(IntermediateDirectory)/InputHandler.cpp$(ObjectSuffix) $(IntermediateDirectory)/Log.cpp$(ObjectSuffix) $(IntermediateDirectory)/Assets.cpp$(ObjectSuffix) $(IntermediateDirectory)/Sprite.cpp$(ObjectSuffix) 
 
 
 
@@ -106,14 +106,6 @@ $(IntermediateDirectory)/config_file.cpp$(DependSuffix): config_file.cpp
 $(IntermediateDirectory)/config_file.cpp$(PreprocessSuffix): config_file.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/config_file.cpp$(PreprocessSuffix) "config_file.cpp"
 
-$(IntermediateDirectory)/game_window.cpp$(ObjectSuffix): game_window.cpp $(IntermediateDirectory)/game_window.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "H:/Dev/IndieBoy/IndieBoy/game_window.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/game_window.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/game_window.cpp$(DependSuffix): game_window.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/game_window.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/game_window.cpp$(DependSuffix) -MM "game_window.cpp"
-
-$(IntermediateDirectory)/game_window.cpp$(PreprocessSuffix): game_window.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/game_window.cpp$(PreprocessSuffix) "game_window.cpp"
-
 $(IntermediateDirectory)/game_object.cpp$(ObjectSuffix): game_object.cpp $(IntermediateDirectory)/game_object.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "H:/Dev/IndieBoy/IndieBoy/game_object.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/game_object.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/game_object.cpp$(DependSuffix): game_object.cpp
@@ -122,6 +114,22 @@ $(IntermediateDirectory)/game_object.cpp$(DependSuffix): game_object.cpp
 $(IntermediateDirectory)/game_object.cpp$(PreprocessSuffix): game_object.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/game_object.cpp$(PreprocessSuffix) "game_object.cpp"
 
+$(IntermediateDirectory)/game_window.cpp$(ObjectSuffix): game_window.cpp $(IntermediateDirectory)/game_window.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "H:/Dev/IndieBoy/IndieBoy/game_window.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/game_window.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/game_window.cpp$(DependSuffix): game_window.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/game_window.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/game_window.cpp$(DependSuffix) -MM "game_window.cpp"
+
+$(IntermediateDirectory)/game_window.cpp$(PreprocessSuffix): game_window.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/game_window.cpp$(PreprocessSuffix) "game_window.cpp"
+
+$(IntermediateDirectory)/InputHandler.cpp$(ObjectSuffix): InputHandler.cpp $(IntermediateDirectory)/InputHandler.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "H:/Dev/IndieBoy/IndieBoy/InputHandler.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/InputHandler.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/InputHandler.cpp$(DependSuffix): InputHandler.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/InputHandler.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/InputHandler.cpp$(DependSuffix) -MM "InputHandler.cpp"
+
+$(IntermediateDirectory)/InputHandler.cpp$(PreprocessSuffix): InputHandler.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/InputHandler.cpp$(PreprocessSuffix) "InputHandler.cpp"
+
 $(IntermediateDirectory)/Log.cpp$(ObjectSuffix): Log.cpp $(IntermediateDirectory)/Log.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "H:/Dev/IndieBoy/IndieBoy/Log.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Log.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Log.cpp$(DependSuffix): Log.cpp
@@ -129,6 +137,22 @@ $(IntermediateDirectory)/Log.cpp$(DependSuffix): Log.cpp
 
 $(IntermediateDirectory)/Log.cpp$(PreprocessSuffix): Log.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Log.cpp$(PreprocessSuffix) "Log.cpp"
+
+$(IntermediateDirectory)/Assets.cpp$(ObjectSuffix): Assets.cpp $(IntermediateDirectory)/Assets.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "H:/Dev/IndieBoy/IndieBoy/Assets.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Assets.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Assets.cpp$(DependSuffix): Assets.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Assets.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Assets.cpp$(DependSuffix) -MM "Assets.cpp"
+
+$(IntermediateDirectory)/Assets.cpp$(PreprocessSuffix): Assets.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Assets.cpp$(PreprocessSuffix) "Assets.cpp"
+
+$(IntermediateDirectory)/Sprite.cpp$(ObjectSuffix): Sprite.cpp $(IntermediateDirectory)/Sprite.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "H:/Dev/IndieBoy/IndieBoy/Sprite.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Sprite.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Sprite.cpp$(DependSuffix): Sprite.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Sprite.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Sprite.cpp$(DependSuffix) -MM "Sprite.cpp"
+
+$(IntermediateDirectory)/Sprite.cpp$(PreprocessSuffix): Sprite.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Sprite.cpp$(PreprocessSuffix) "Sprite.cpp"
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
@@ -142,15 +166,24 @@ clean:
 	$(RM) $(IntermediateDirectory)/config_file.cpp$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/config_file.cpp$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/config_file.cpp$(PreprocessSuffix)
-	$(RM) $(IntermediateDirectory)/game_window.cpp$(ObjectSuffix)
-	$(RM) $(IntermediateDirectory)/game_window.cpp$(DependSuffix)
-	$(RM) $(IntermediateDirectory)/game_window.cpp$(PreprocessSuffix)
 	$(RM) $(IntermediateDirectory)/game_object.cpp$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/game_object.cpp$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/game_object.cpp$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/game_window.cpp$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/game_window.cpp$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/game_window.cpp$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/InputHandler.cpp$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/InputHandler.cpp$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/InputHandler.cpp$(PreprocessSuffix)
 	$(RM) $(IntermediateDirectory)/Log.cpp$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/Log.cpp$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/Log.cpp$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/Assets.cpp$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/Assets.cpp$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/Assets.cpp$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/Sprite.cpp$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/Sprite.cpp$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/Sprite.cpp$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile).exe
 	$(RM) ".build-debug/IndieBoy"

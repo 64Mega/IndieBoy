@@ -61,8 +61,9 @@ Debug/main.cpp.o: main.cpp C:/Dev/SFML-2.0/include/SFML/Graphics.hpp \
  C:/Dev/SFML-2.0/include/SFML/Graphics/RectangleShape.hpp \
  C:/Dev/SFML-2.0/include/SFML/Graphics/ConvexShape.hpp \
  C:/Dev/SFML-2.0/include/SFML/Graphics/Sprite.hpp \
- C:/Dev/SFML-2.0/include/SFML/Graphics/Text.hpp log.h config_file.h \
- C:/Dev/myinclude/mio.h game_window.h
+ C:/Dev/SFML-2.0/include/SFML/Graphics/Text.hpp game.h log.h \
+ inputhandler.h config_file.h C:/Dev/myinclude/mio.h game_window.h \
+ assets.h sprite.h
 
 C:/Dev/SFML-2.0/include/SFML/Graphics.hpp:
 
@@ -192,10 +193,18 @@ C:/Dev/SFML-2.0/include/SFML/Graphics/Sprite.hpp:
 
 C:/Dev/SFML-2.0/include/SFML/Graphics/Text.hpp:
 
+game.h:
+
 log.h:
+
+inputhandler.h:
 
 config_file.h:
 
 C:/Dev/myinclude/mio.h:
 
 game_window.h:
+
+assets.h:
+
+sprite.h:

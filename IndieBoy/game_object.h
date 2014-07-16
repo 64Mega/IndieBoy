@@ -14,6 +14,8 @@ public:
 
 						GameObject();
 						~GameObject();
+						
+	
 				
 	position_t			position;
 };

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="IndieBoy" InternalType="Console">
   <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00010001N0005Debug000000000000]]>
+    </Plugin>
     <Plugin Name="CMakePlugin">
       <![CDATA[[{
 		"name":	"Debug",
@@ -13,22 +16,28 @@
 		"parentProject":	""
 	}]]]>
     </Plugin>
-    <Plugin Name="qmake">
-      <![CDATA[00010001N0005Debug000000000000]]>
-    </Plugin>
   </Plugins>
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
     <File Name="main.cpp"/>
-    <File Name="config_file.h"/>
-    <File Name="config_file.cpp"/>
-    <File Name="game_window.h"/>
-    <File Name="game_window.cpp"/>
-    <File Name="game_object.h"/>
-    <File Name="game_object.cpp"/>
-    <File Name="Log.h"/>
-    <File Name="Log.cpp"/>
+    <File Name="game.h"/>
+    <VirtualDirectory Name="Engine">
+      <File Name="config_file.cpp"/>
+      <File Name="config_file.h"/>
+      <File Name="game_object.cpp"/>
+      <File Name="game_object.h"/>
+      <File Name="game_window.cpp"/>
+      <File Name="game_window.h"/>
+      <File Name="InputHandler.cpp"/>
+      <File Name="InputHandler.h"/>
+      <File Name="Log.cpp"/>
+      <File Name="Log.h"/>
+      <File Name="Assets.h"/>
+      <File Name="Assets.cpp"/>
+      <File Name="Sprite.h"/>
+      <File Name="Sprite.cpp"/>
+    </VirtualDirectory>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

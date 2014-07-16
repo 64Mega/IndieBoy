@@ -1,3 +1,7 @@
-[ConfigFile][INFO](20:53:13): Loaded config.cfg
-[GameWindow][INFO](20:53:13): Getting window configuration from file
-[GameWindow][INFO](20:53:13): Creating GameWindow
+[GameWindow][INFO](15:27:58): Getting window configuration from file
+[GameWindow][INFO](15:27:58): Creating GameWindow
+[Assets][INFO](15:27:59): Loaded graphics/rat_idle_18.png
+[Assets][INFO](15:27:59): Loaded graphics/TestSprite.png
+[Assets][INFO](15:28:8): Releasing assets
+[Assets][INFO](15:28:8): Released graphics
+[Main][INFO](15:28:8): Exiting cleanly

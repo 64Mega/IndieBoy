@@ -17,7 +17,7 @@ public:
 	std::string			title;
 	sf::RenderWindow 		*window;
 	
-	void					create();
+	void					create(ConfigFile& config);
 	void					setupFromConfig(ConfigFile& config);
 
 							GameWindow();
@@ -25,6 +25,8 @@ public:
 	
 	bool 					refresh();
 	void					render();
+	
+	void					close();
 };
 
 #endif // GAMEWINDOW_H
