@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Daniel
-Date                   :=07/16/14
+Date                   :=07/18/14
 CodeLitePath           :="C:\Program Files\CodeLite"
 LinkerName             :=C:\MinGW-4.7\bin\g++.exe 
 SharedObjectLinkerName :=C:\MinGW-4.7\bin\g++.exe -shared -fPIC
@@ -63,7 +63,8 @@ AS       := C:\MinGW-4.7\bin\as.exe
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
 UNIT_TEST_PP_SRC_DIR:=C:\UnitTest++-1.3
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/config_file.cpp$(ObjectSuffix) $(IntermediateDirectory)/game_object.cpp$(ObjectSuffix) $(IntermediateDirectory)/game_window.cpp$(ObjectSuffix) $(IntermediateDirectory)/InputHandler.cpp$(ObjectSuffix) $(IntermediateDirectory)/Log.cpp$(ObjectSuffix) $(IntermediateDirectory)/Assets.cpp$(ObjectSuffix) $(IntermediateDirectory)/Sprite.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/config_file.cpp$(ObjectSuffix) $(IntermediateDirectory)/game_object.cpp$(ObjectSuffix) $(IntermediateDirectory)/game_window.cpp$(ObjectSuffix) $(IntermediateDirectory)/InputHandler.cpp$(ObjectSuffix) $(IntermediateDirectory)/Log.cpp$(ObjectSuffix) $(IntermediateDirectory)/Assets.cpp$(ObjectSuffix) $(IntermediateDirectory)/Sprite.cpp$(ObjectSuffix) $(IntermediateDirectory)/ObjectRegistry.cpp$(ObjectSuffix) $(IntermediateDirectory)/TestObject.cpp$(ObjectSuffix) \
+	
 
 
 
@@ -154,6 +155,22 @@ $(IntermediateDirectory)/Sprite.cpp$(DependSuffix): Sprite.cpp
 $(IntermediateDirectory)/Sprite.cpp$(PreprocessSuffix): Sprite.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Sprite.cpp$(PreprocessSuffix) "Sprite.cpp"
 
+$(IntermediateDirectory)/ObjectRegistry.cpp$(ObjectSuffix): ObjectRegistry.cpp $(IntermediateDirectory)/ObjectRegistry.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "H:/Dev/IndieBoy/IndieBoy/ObjectRegistry.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/ObjectRegistry.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/ObjectRegistry.cpp$(DependSuffix): ObjectRegistry.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/ObjectRegistry.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/ObjectRegistry.cpp$(DependSuffix) -MM "ObjectRegistry.cpp"
+
+$(IntermediateDirectory)/ObjectRegistry.cpp$(PreprocessSuffix): ObjectRegistry.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/ObjectRegistry.cpp$(PreprocessSuffix) "ObjectRegistry.cpp"
+
+$(IntermediateDirectory)/TestObject.cpp$(ObjectSuffix): TestObject.cpp $(IntermediateDirectory)/TestObject.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "H:/Dev/IndieBoy/IndieBoy/TestObject.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/TestObject.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/TestObject.cpp$(DependSuffix): TestObject.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/TestObject.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/TestObject.cpp$(DependSuffix) -MM "TestObject.cpp"
+
+$(IntermediateDirectory)/TestObject.cpp$(PreprocessSuffix): TestObject.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/TestObject.cpp$(PreprocessSuffix) "TestObject.cpp"
+
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
 ##
@@ -184,6 +201,12 @@ clean:
 	$(RM) $(IntermediateDirectory)/Sprite.cpp$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/Sprite.cpp$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/Sprite.cpp$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/ObjectRegistry.cpp$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/ObjectRegistry.cpp$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/ObjectRegistry.cpp$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/TestObject.cpp$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/TestObject.cpp$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/TestObject.cpp$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile).exe
 	$(RM) ".build-debug/IndieBoy"

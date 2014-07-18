@@ -3,6 +3,8 @@
 
 // Defines the base game object that all others will inherit from
 
+#include <objectregistry.h>
+
 typedef struct
 {
 	float x, y;
@@ -11,13 +13,19 @@ typedef struct
 class GameObject
 {
 public:
-
-						GameObject();
-						~GameObject();
-						
+	static ObjectRegistry 			registry;
 	
+									GameObject();
+	virtual							~GameObject();
+						
+	virtual void					onUpdate();
+	virtual void					onInstance();
+	virtual void					onDeath();
+	
+	virtual ObjectRegistry& 		getRegistry();
 				
-	position_t			position;
+	position_t						position;
+	bool							dead;
 };
 
 #endif // GAMEOBJECT_H

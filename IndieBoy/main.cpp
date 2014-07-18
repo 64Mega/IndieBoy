@@ -7,7 +7,12 @@
 #include <game.h>
 #include <sprite.h>
 
+#include <game_object.h>
+#include <testobject.h>
+
 #include <dirent.h>
+
+using namespace std;
 
 int main(int argc, char **argv)
 {
@@ -25,7 +30,16 @@ int main(int argc, char **argv)
 	
 	Sprite testSprite;
 	testSprite.setGraphic(Assets::getGraphic("rat_idle_18.png"), 16, 16);
-	testSprite.speed = 0.5F;
+	testSprite.speed = 0.25F;
+	
+	// Let's test the Object Registry
+	GameObject a, b, c;
+	cout << "Created 3 GameObjects. GameObject::getRegistry() == " << GameObject::registry.getNumObjects() << endl;
+	TestObject x, y;
+	cout << "Created 2 TestObjects. GameObject::getRegistry() == " << GameObject::registry.getNumObjects() << endl;
+	cout << "TestObject::registry.size() == " << TestObject::registry.getNumObjects() << endl;
+	
+	// HECK. YEAH.
 
 	while(gameWindow.refresh())
 	{

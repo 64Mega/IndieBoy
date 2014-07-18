@@ -37,6 +37,13 @@
       <File Name="Assets.cpp"/>
       <File Name="Sprite.h"/>
       <File Name="Sprite.cpp"/>
+      <File Name="ObjectRegistry.h"/>
+      <File Name="ObjectRegistry.cpp"/>
+    </VirtualDirectory>
+    <File Name="TODO.txt" ExcludeProjConfig="Debug"/>
+    <VirtualDirectory Name="Game Objects">
+      <File Name="TestObject.h"/>
+      <File Name="TestObject.cpp"/>
     </VirtualDirectory>
   </VirtualDirectory>
   <Settings Type="Executable">

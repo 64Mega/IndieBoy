@@ -1,7 +1,7 @@
-[GameWindow][INFO](15:27:58): Getting window configuration from file
-[GameWindow][INFO](15:27:58): Creating GameWindow
-[Assets][INFO](15:27:59): Loaded graphics/rat_idle_18.png
-[Assets][INFO](15:27:59): Loaded graphics/TestSprite.png
-[Assets][INFO](15:28:8): Releasing assets
-[Assets][INFO](15:28:8): Released graphics
-[Main][INFO](15:28:8): Exiting cleanly
+[GameWindow][INFO](10:29:9): Getting window configuration from file
+[GameWindow][INFO](10:29:9): Creating GameWindow
+[Assets][INFO](10:29:9): Loaded graphics/rat_idle_18.png
+[Assets][INFO](10:29:9): Loaded graphics/TestSprite.png
+[Assets][INFO](10:29:29): Releasing assets
+[Assets][INFO](10:29:29): Released graphics
+[Main][INFO](10:29:29): Exiting cleanly
