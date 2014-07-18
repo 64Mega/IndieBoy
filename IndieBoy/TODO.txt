@@ -1,7 +1,7 @@
 TODO List for IndieBoy engine
 -----------------------------
  > Complete GameObject type
- > Implment bsaic collision classes
+ > Implment basic collision classes
  > Create Tilemap type
  > Create Background type
  > Transitions?

@@ -39,6 +39,8 @@
       <File Name="Sprite.cpp"/>
       <File Name="ObjectRegistry.h"/>
       <File Name="ObjectRegistry.cpp"/>
+      <File Name="BoundingBox.h"/>
+      <File Name="BoundingBox.cpp"/>
     </VirtualDirectory>
     <File Name="TODO.txt" ExcludeProjConfig="Debug"/>
     <VirtualDirectory Name="Game Objects">

@@ -15,11 +15,11 @@ void ObjectRegistry::add(GameObject* obj)
 	g_list.push_back(obj);
 }
 
-void ObjectRegistry::iterate(std::function<void (const GameObject*)> func)
+void ObjectRegistry::iterate(std::function<void (GameObject&)> func)
 {
 	for(unsigned int i = 0; i < g_list.size(); i++)
 	{
-		func(g_list[i]);
+		func(*g_list[i]);
 	}
 }
 

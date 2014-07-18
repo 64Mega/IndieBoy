@@ -4,6 +4,7 @@
 // Defines the base game object that all others will inherit from
 
 #include <objectregistry.h>
+#include <boundingbox.h>
 
 typedef struct
 {
@@ -15,6 +16,8 @@ class GameObject
 public:
 	static ObjectRegistry 			registry;
 	
+	static bool						collides(const GameObject& first, const GameObject& second);
+	
 									GameObject();
 	virtual							~GameObject();
 						
@@ -24,6 +27,7 @@ public:
 	
 	virtual ObjectRegistry& 		getRegistry();
 				
+	BoundingBox						bounding_box;
 	position_t						position;
 	bool							dead;
 };

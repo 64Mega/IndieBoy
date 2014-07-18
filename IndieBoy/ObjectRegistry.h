@@ -21,7 +21,7 @@ public:
 	void							cullDeads();
 	int								getNumObjects(); 
 	
-	void							iterate(std::function<void (const GameObject*)> func);
+	void							iterate(std::function<void (GameObject&)> func);
 };
 
 #endif // OBJECTREGISTRY_H

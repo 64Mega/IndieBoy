@@ -63,8 +63,8 @@ Debug/main.cpp.o: main.cpp C:/Dev/SFML-2.0/include/SFML/Graphics.hpp \
  C:/Dev/SFML-2.0/include/SFML/Graphics/Sprite.hpp \
  C:/Dev/SFML-2.0/include/SFML/Graphics/Text.hpp game.h log.h \
  inputhandler.h config_file.h C:/Dev/myinclude/mio.h game_window.h \
- assets.h sprite.h game_object.h objectregistry.h testobject.h \
- game_object.h
+ assets.h sprite.h game_object.h objectregistry.h boundingbox.h \
+ testobject.h game_object.h
 
 C:/Dev/SFML-2.0/include/SFML/Graphics.hpp:
 
@@ -213,6 +213,8 @@ sprite.h:
 game_object.h:
 
 objectregistry.h:
+
+boundingbox.h:
 
 testobject.h:
 

@@ -33,13 +33,18 @@ int main(int argc, char **argv)
 	testSprite.speed = 0.25F;
 	
 	// Let's test the Object Registry
-	GameObject a, b, c;
-	cout << "Created 3 GameObjects. GameObject::getRegistry() == " << GameObject::registry.getNumObjects() << endl;
-	TestObject x, y;
-	cout << "Created 2 TestObjects. GameObject::getRegistry() == " << GameObject::registry.getNumObjects() << endl;
-	cout << "TestObject::registry.size() == " << TestObject::registry.getNumObjects() << endl;
-	
-	// HECK. YEAH.
+	GameObject a, b;
+	// Set up basic bounding boxes for two objects.
+	a.bounding_box.setup(BOX_16X16);
+	b.bounding_box.setup(BOX_16X16);
+	a.position.x = 32;
+	a.position.y = 32;
+	b.position.x = 40;
+	b.position.y = 40;
+
+	GameObject::registry.iterate([](GameObject& obj){
+		obj.onUpdate();
+	});
 
 	while(gameWindow.refresh())
 	{

@@ -63,8 +63,8 @@ AS       := C:\MinGW-4.7\bin\as.exe
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
 UNIT_TEST_PP_SRC_DIR:=C:\UnitTest++-1.3
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/config_file.cpp$(ObjectSuffix) $(IntermediateDirectory)/game_object.cpp$(ObjectSuffix) $(IntermediateDirectory)/game_window.cpp$(ObjectSuffix) $(IntermediateDirectory)/InputHandler.cpp$(ObjectSuffix) $(IntermediateDirectory)/Log.cpp$(ObjectSuffix) $(IntermediateDirectory)/Assets.cpp$(ObjectSuffix) $(IntermediateDirectory)/Sprite.cpp$(ObjectSuffix) $(IntermediateDirectory)/ObjectRegistry.cpp$(ObjectSuffix) $(IntermediateDirectory)/TestObject.cpp$(ObjectSuffix) \
-	
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/config_file.cpp$(ObjectSuffix) $(IntermediateDirectory)/game_object.cpp$(ObjectSuffix) $(IntermediateDirectory)/game_window.cpp$(ObjectSuffix) $(IntermediateDirectory)/InputHandler.cpp$(ObjectSuffix) $(IntermediateDirectory)/Log.cpp$(ObjectSuffix) $(IntermediateDirectory)/Assets.cpp$(ObjectSuffix) $(IntermediateDirectory)/Sprite.cpp$(ObjectSuffix) $(IntermediateDirectory)/ObjectRegistry.cpp$(ObjectSuffix) $(IntermediateDirectory)/BoundingBox.cpp$(ObjectSuffix) \
+	$(IntermediateDirectory)/TestObject.cpp$(ObjectSuffix) 
 
 
 
@@ -163,6 +163,14 @@ $(IntermediateDirectory)/ObjectRegistry.cpp$(DependSuffix): ObjectRegistry.cpp
 $(IntermediateDirectory)/ObjectRegistry.cpp$(PreprocessSuffix): ObjectRegistry.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/ObjectRegistry.cpp$(PreprocessSuffix) "ObjectRegistry.cpp"
 
+$(IntermediateDirectory)/BoundingBox.cpp$(ObjectSuffix): BoundingBox.cpp $(IntermediateDirectory)/BoundingBox.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "H:/Dev/IndieBoy/IndieBoy/BoundingBox.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/BoundingBox.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/BoundingBox.cpp$(DependSuffix): BoundingBox.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/BoundingBox.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/BoundingBox.cpp$(DependSuffix) -MM "BoundingBox.cpp"
+
+$(IntermediateDirectory)/BoundingBox.cpp$(PreprocessSuffix): BoundingBox.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/BoundingBox.cpp$(PreprocessSuffix) "BoundingBox.cpp"
+
 $(IntermediateDirectory)/TestObject.cpp$(ObjectSuffix): TestObject.cpp $(IntermediateDirectory)/TestObject.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "H:/Dev/IndieBoy/IndieBoy/TestObject.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/TestObject.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/TestObject.cpp$(DependSuffix): TestObject.cpp
@@ -204,6 +212,9 @@ clean:
 	$(RM) $(IntermediateDirectory)/ObjectRegistry.cpp$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/ObjectRegistry.cpp$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/ObjectRegistry.cpp$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/BoundingBox.cpp$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/BoundingBox.cpp$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/BoundingBox.cpp$(PreprocessSuffix)
 	$(RM) $(IntermediateDirectory)/TestObject.cpp$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/TestObject.cpp$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/TestObject.cpp$(PreprocessSuffix)
