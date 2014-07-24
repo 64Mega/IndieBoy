@@ -24,8 +24,6 @@ public:
 	virtual void					onUpdate();
 	virtual void					onInstance();
 	virtual void					onDeath();
-	
-	virtual ObjectRegistry& 		getRegistry();
 				
 	BoundingBox						bounding_box;
 	position_t						position;

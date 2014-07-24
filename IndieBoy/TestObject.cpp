@@ -22,7 +22,3 @@ void TestObject::onUpdate()
 {
 }
 
-ObjectRegistry& TestObject::getRegistry()
-{
-	return registry;
-}

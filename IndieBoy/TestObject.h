@@ -15,7 +15,6 @@ public:
 	virtual void 					onDeath();
 	virtual void 					onInstance();
 	virtual void 					onUpdate();
-	virtual ObjectRegistry& 		getRegistry();
 };
 
 #endif // TESTOBJECT_H

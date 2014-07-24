@@ -1,7 +1,16 @@
-[GameWindow][INFO](14:6:25): Getting window configuration from file
-[GameWindow][INFO](14:6:25): Creating GameWindow
-[Assets][INFO](14:6:25): Loaded graphics/rat_idle_18.png
-[Assets][INFO](14:6:25): Loaded graphics/TestSprite.png
-[Assets][INFO](14:6:30): Releasing assets
-[Assets][INFO](14:6:30): Released graphics
-[Main][INFO](14:6:30): Exiting cleanly
+[GameWindow][INFO](19:56:36): Getting window configuration from file
+[GameWindow][INFO](19:56:36): Creating GameWindow
+[Assets][INFO](19:56:36): Loaded graphics/GoblinBase0.png
+[Assets][INFO](19:56:36): Loaded graphics/GoblinBase1.png
+[Assets][INFO](19:56:36): Loaded graphics/GoblinBase2.png
+[Assets][INFO](19:56:36): Loaded graphics/GoblinBase3.png
+[Assets][INFO](19:56:36): Loaded graphics/GoblinBase4.png
+[Assets][INFO](19:56:36): Loaded graphics/GoblinBase5.png
+[Assets][INFO](19:56:36): Loaded graphics/GoblinBase6.png
+[Assets][INFO](19:56:36): Loaded graphics/GoblinBase7.png
+[Assets][INFO](19:56:36): Loaded graphics/GoblinBase8.png
+[Assets][INFO](19:56:36): Loaded graphics/rat_idle_18.png
+[Assets][INFO](19:56:36): Loaded graphics/TestSprite.png
+[Assets][INFO](19:56:39): Releasing assets
+[Assets][INFO](19:56:39): Released graphics
+[Main][INFO](19:56:39): Exiting cleanly

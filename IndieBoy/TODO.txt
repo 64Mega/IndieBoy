@@ -1,11 +1,8 @@
 TODO List for IndieBoy engine
 -----------------------------
- > Complete GameObject type
- > Implment basic collision classes
  > Create Tilemap type
  > Create Background type
  > Transitions?
- > Separate bounding boxes for GameObject's?
  > Basis for sound system
  > Basis for music system
  > The concept of "Boards" or "Frames" for gameplay. Perhaps a Screen Object?
@@ -15,3 +12,10 @@ TODO List for IndieBoy engine
  > Basis for network support?
  > Palette clamp shaders for simulation of old console systems.
  > ???
+
+#####################
+## DONE
+#####################
+ > Complete GameObject type
+ > Implement basic collision classes
+ > Separate bounding boxes for GameObject's?

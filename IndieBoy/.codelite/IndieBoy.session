@@ -1,40 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="H:\Dev\IndieBoy\IndieBoy\IndieBoy.workspace">
-  <int Value="3" Name="m_selectedTab"/>
+  <int Value="0" Name="m_selectedTab"/>
   <wxString Value="H:\Dev\IndieBoy\IndieBoy\IndieBoy.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="H:\Dev\IndieBoy\IndieBoy\game_object.h" Name="FileName"/>
-      <int Value="7" Name="FirstVisibleLine"/>
-      <int Value="24" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="H:\Dev\IndieBoy\IndieBoy\game_object.cpp" Name="FileName"/>
-      <int Value="8" Name="FirstVisibleLine"/>
-      <int Value="26" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="H:\Dev\IndieBoy\IndieBoy\TestObject.h" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="10" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="H:\Dev\IndieBoy\IndieBoy\TestObject.cpp" Name="FileName"/>
-      <int Value="6" Name="FirstVisibleLine"/>
-      <int Value="19" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
       <wxString Value="H:\Dev\IndieBoy\IndieBoy\main.cpp" Name="FileName"/>
-      <int Value="29" Name="FirstVisibleLine"/>
-      <int Value="41" Name="CurrentLine"/>
+      <int Value="27" Name="FirstVisibleLine"/>
+      <int Value="20" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>

@@ -37,11 +37,6 @@ void GameObject::onUpdate()
 	});
 }
 
-ObjectRegistry& GameObject::getRegistry()
-{
-	return registry;
-}
-
 bool GameObject::collides(const GameObject& first, const GameObject& second)
 {
 	int bb1_width  = first.bounding_box.right - first.bounding_box.left;

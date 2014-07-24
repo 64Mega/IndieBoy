@@ -14,7 +14,7 @@ public:
 	int						native_width;
 	int						native_height;
 	float 					scale;
-	std::string			title;
+	std::string				title;
 	sf::RenderWindow 		*window;
 	
 	void					create(ConfigFile& config);

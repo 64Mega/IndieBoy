@@ -32,20 +32,6 @@ int main(int argc, char **argv)
 	testSprite.setGraphic(Assets::getGraphic("rat_idle_18.png"), 16, 16);
 	testSprite.speed = 0.25F;
 	
-	// Let's test the Object Registry
-	GameObject a, b;
-	// Set up basic bounding boxes for two objects.
-	a.bounding_box.setup(BOX_16X16);
-	b.bounding_box.setup(BOX_16X16);
-	a.position.x = 32;
-	a.position.y = 32;
-	b.position.x = 40;
-	b.position.y = 40;
-
-	GameObject::registry.iterate([](GameObject& obj){
-		obj.onUpdate();
-	});
-
 	while(gameWindow.refresh())
 	{
 		if(InputHandler::isKeyDown(KB::Escape))
@@ -77,3 +63,6 @@ int main(int argc, char **argv)
 	Log::info("Main", "Exiting cleanly");
 	return 0;
 }
+
+
+
