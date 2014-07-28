@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Daniel
-Date                   :=07/23/14
+Date                   :=07/24/14
 CodeLitePath           :="C:\Program Files\CodeLite"
 LinkerName             :=C:\MinGW-4.7\bin\g++.exe 
 SharedObjectLinkerName :=C:\MinGW-4.7\bin\g++.exe -shared -fPIC
@@ -50,7 +50,7 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)C:/Dev/SFML-
 ## AR, CXX, CC, AS, CXXFLAGS and CFLAGS can be overriden using an environment variables
 ##
 AR       := C:\MinGW-4.7\bin\ar.exe rcu
-CXX      := C:\MinGW-4.7\bin\g++.exe
+CXX      := C:\MinGW-4.7\bin\g++.exe 
 CC       := C:\MinGW-4.7\bin\gcc.exe 
 CXXFLAGS :=  -g -O0 -Wall -fpermissive -std=c++11 $(Preprocessors)
 CFLAGS   :=  -g -O0 -Wall -fpermissive $(Preprocessors)
@@ -64,7 +64,7 @@ AS       := C:\MinGW-4.7\bin\as.exe
 CodeLiteDir:=C:\Program Files\CodeLite
 UNIT_TEST_PP_SRC_DIR:=C:\UnitTest++-1.3
 Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/config_file.cpp$(ObjectSuffix) $(IntermediateDirectory)/game_object.cpp$(ObjectSuffix) $(IntermediateDirectory)/game_window.cpp$(ObjectSuffix) $(IntermediateDirectory)/InputHandler.cpp$(ObjectSuffix) $(IntermediateDirectory)/Log.cpp$(ObjectSuffix) $(IntermediateDirectory)/Assets.cpp$(ObjectSuffix) $(IntermediateDirectory)/Sprite.cpp$(ObjectSuffix) $(IntermediateDirectory)/ObjectRegistry.cpp$(ObjectSuffix) $(IntermediateDirectory)/BoundingBox.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/TestObject.cpp$(ObjectSuffix) 
+	$(IntermediateDirectory)/Screen.cpp$(ObjectSuffix) $(IntermediateDirectory)/TestObject.cpp$(ObjectSuffix) 
 
 
 
@@ -171,6 +171,14 @@ $(IntermediateDirectory)/BoundingBox.cpp$(DependSuffix): BoundingBox.cpp
 $(IntermediateDirectory)/BoundingBox.cpp$(PreprocessSuffix): BoundingBox.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/BoundingBox.cpp$(PreprocessSuffix) "BoundingBox.cpp"
 
+$(IntermediateDirectory)/Screen.cpp$(ObjectSuffix): Screen.cpp $(IntermediateDirectory)/Screen.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "H:/Dev/IndieBoy/IndieBoy/Screen.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Screen.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Screen.cpp$(DependSuffix): Screen.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Screen.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Screen.cpp$(DependSuffix) -MM "Screen.cpp"
+
+$(IntermediateDirectory)/Screen.cpp$(PreprocessSuffix): Screen.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Screen.cpp$(PreprocessSuffix) "Screen.cpp"
+
 $(IntermediateDirectory)/TestObject.cpp$(ObjectSuffix): TestObject.cpp $(IntermediateDirectory)/TestObject.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "H:/Dev/IndieBoy/IndieBoy/TestObject.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/TestObject.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/TestObject.cpp$(DependSuffix): TestObject.cpp
@@ -215,6 +223,9 @@ clean:
 	$(RM) $(IntermediateDirectory)/BoundingBox.cpp$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/BoundingBox.cpp$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/BoundingBox.cpp$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/Screen.cpp$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/Screen.cpp$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/Screen.cpp$(PreprocessSuffix)
 	$(RM) $(IntermediateDirectory)/TestObject.cpp$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/TestObject.cpp$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/TestObject.cpp$(PreprocessSuffix)

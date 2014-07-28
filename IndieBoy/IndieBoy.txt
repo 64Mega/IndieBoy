@@ -1,1 +1,1 @@
-./Debug/main.cpp.o ./Debug/config_file.cpp.o ./Debug/game_object.cpp.o ./Debug/game_window.cpp.o ./Debug/InputHandler.cpp.o ./Debug/Log.cpp.o ./Debug/Assets.cpp.o ./Debug/Sprite.cpp.o ./Debug/ObjectRegistry.cpp.o ./Debug/BoundingBox.cpp.o ./Debug/TestObject.cpp.o   
+./Debug/main.cpp.o ./Debug/config_file.cpp.o ./Debug/game_object.cpp.o ./Debug/game_window.cpp.o ./Debug/InputHandler.cpp.o ./Debug/Log.cpp.o ./Debug/Assets.cpp.o ./Debug/Sprite.cpp.o ./Debug/ObjectRegistry.cpp.o ./Debug/BoundingBox.cpp.o ./Debug/Screen.cpp.o ./Debug/TestObject.cpp.o   

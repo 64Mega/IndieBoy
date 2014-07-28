@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="IndieBoy" Database="./IndieBoy.tags">
   <Project Name="IndieBoy" Path="IndieBoy.project" Active="Yes"/>
+  <Project Name="VCODE" Path="../../VCODE/VCODE/VCODE.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Project Name="IndieBoy" ConfigName="Debug"/>
+      <Project Name="VCODE" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="IndieBoy" ConfigName="Release"/>
+      <Project Name="VCODE" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

@@ -41,6 +41,8 @@
       <File Name="ObjectRegistry.cpp"/>
       <File Name="BoundingBox.h"/>
       <File Name="BoundingBox.cpp"/>
+      <File Name="Screen.h"/>
+      <File Name="Screen.cpp"/>
     </VirtualDirectory>
     <File Name="TODO.txt" ExcludeProjConfig="Debug"/>
     <VirtualDirectory Name="Game Objects">

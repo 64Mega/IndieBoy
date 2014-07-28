@@ -2,16 +2,12 @@ TODO List for IndieBoy engine
 -----------------------------
  > Create Tilemap type
  > Create Background type
- > Transitions?
+ > Add basic map type
+ > Add a simple PAK handler 
  > Basis for sound system
  > Basis for music system
- > The concept of "Boards" or "Frames" for gameplay. Perhaps a Screen Object?
- > An external scripting engine of sorts. Perhaps Bytecode based, otherwise LUA.
  > Font Writer and support for bitmap fonts.
  > Controller support. 
- > Basis for network support?
- > Palette clamp shaders for simulation of old console systems.
- > ???
 
 #####################
 ## DONE

@@ -13,6 +13,7 @@ ObjectRegistry::~ObjectRegistry()
 void ObjectRegistry::add(GameObject* obj)
 {
 	g_list.push_back(obj);
+	obj->onInstance();
 }
 
 void ObjectRegistry::iterate(std::function<void (GameObject&)> func)
@@ -30,6 +31,7 @@ void ObjectRegistry::cullDeads()
 		if(!(*iter)->dead) { continue; }
 		
 		GameObject* dptr = *iter;
+		dptr->onDeath();
 		iter = g_list.erase(iter);
 		delete dptr;
 		if(iter == g_list.end()) { break; }
